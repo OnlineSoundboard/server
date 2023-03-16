@@ -1,0 +1,12 @@
+{
+  "extends": "standard-with-typescript",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "@typescript-eslint/consistent-type-imports": ["warn", {
+      "fixStyle": "inline-type-imports"
+    }]
+  },
+  "ignorePatterns": ["build", "test"]
+}

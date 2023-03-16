@@ -1,0 +1,39 @@
+{
+  "name": "online-soundboard-server",
+  "version": "0.1.0",
+  "repository": "git@github.com:OnlineSoundboard/server.git",
+  "author": "Dastan21",
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "start": "node build/server.js",
+    "dev": "npx nodemon --exec node --loader ts-node/esm -r dotenv/config src/server.ts",
+    "build": "npx tsc",
+    "test": "npx vitest",
+    "coverage": "npx vitest run --coverage",
+    "eslint": "npx eslint .",
+    "build:prod": "npx rimraf build/* && pnpm run eslint && pnpm run build"
+  },
+  "dependencies": {
+    "debug": "^4.3.4",
+    "socket.io": "^4.6.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.7",
+    "@types/node": "^18.15.0",
+    "@types/uuid": "^9.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@vitest/coverage-c8": "^0.29.2",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.36.0",
+    "eslint-config-standard-with-typescript": "^24.0.0",
+    "nodemon": "^2.0.21",
+    "rimraf": "^3.0.2",
+    "socket.io-client": "^4.6.1",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5",
+    "vitest": "^0.29.2"
+  }
+}
